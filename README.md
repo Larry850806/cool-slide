@@ -2,8 +2,8 @@
 
 ## Requirement
 
-`- node >= 4.4.1`
-`- npm >= 3.8.7`
+- `node >= 4.4.1`
+- `npm >= 3.8.7`
 
 ## Install
 
