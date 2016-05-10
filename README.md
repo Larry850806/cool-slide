@@ -13,18 +13,16 @@ npm install Larry850806/cool-slide -g
 
 ## Usage
 
-```
-- step1: create a file 'test.md'
+- step1: `create a file 'test.md'`
 
-- step2: cool-slide test.md test.html
+- step2: `cool-slide test.md test.html`
 
-- step3: open 'test.html' to see your slide
-```
+- step3: `open 'test.html' to see your slide`
 
 ## Documentation
 
-use `---` to create new chapter
-use `----` to create new slide in the same chapter
+- use `---` to create new chapter
+- use `----` to create new slide in the same chapter
 
 ## Example
 
@@ -32,6 +30,7 @@ use `----` to create new slide in the same chapter
 
 # test1
 ## testing
+
 - Larry
 
 ----
