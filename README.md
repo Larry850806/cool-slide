@@ -56,7 +56,7 @@ npm install Larry850806/cool-slide -g
 
 - use markdown syntax
 - use `---` to create new chapter
-- use `----` to create new slide in the same chapter
+- use `----` to create new slide in the chapter
 
 ## Example
 
