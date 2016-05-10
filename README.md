@@ -2,8 +2,8 @@
 
 ## Requirement
 
-- `node >= 4.4.1`
-- `npm >= 3.8.7`
+`- node >= 4.4.1`
+`- npm >= 3.8.7`
 
 ## Install
 
@@ -21,36 +21,40 @@ npm install Larry850806/cool-slide -g
 
 ## Documentation
 
+- use markdown syntax
 - use `---` to create new chapter
 - use `----` to create new slide in the same chapter
 
 ## Example
 
-+ test.md:
++ demo.md:
 ```markdown
 
+# This is chapter 1
+
+----
+
+# This is a slide in chapter 1
+
+----
+
+# Hello ~
+
+---
+
+# This is chapter 2
+
+---
+
 # test1
-## testing
-
-- Larry
-
-----
-
-# test Down
-
-----
-
-# test Down 2
-
----
-
-# test2
-
----
-
-# test Final
+## test2
+### test3
+- test4
 
 ```
+
+[demo.html](https://rawgit.com/Larry850806/cool-slide/master/demo.html)
+
 
 ## License
 
