@@ -7,15 +7,19 @@
 
 ## Install
 
+```
 npm install Larry850806/cool-slide -g
+```
 
 ## Usage
 
+```
 - step1: create a file 'test.md'
 
 - step2: cool-slide test.md test.html
 
 - step3: open 'test.html' to see your slide
+```
 
 ## Documentation
 
