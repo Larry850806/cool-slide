@@ -2,8 +2,8 @@
 
 ## Requirement
 
-- node >= 4.4.1
-- npm >= 3.8.7
+- `node >= 4.4.1`
+- `npm >= 3.8.7`
 
 ## Install
 
@@ -26,6 +26,7 @@ npm install Larry850806/cool-slide -g
 
 ## Example
 
++ test.md:
 ```markdown
 
 # test1
