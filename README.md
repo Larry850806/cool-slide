@@ -15,21 +15,8 @@ npm install Larry850806/cool-slide -g
 
 - step1: create a file 'test.md'
 
-- step2: `cool-slide test.md test.html`
+- step2: paste it to test.md
 
-- step3: open 'test.html' to see your slide
-
-## Documentation
-
-- use markdown syntax
-- use `---` to create new chapter
-- use `----` to create new slide in the same chapter
-
-## Example
-
-[click me to see demo.html](https://rawgit.com/Larry850806/cool-slide/master/demo.html)
-
-+ demo.md:
 ```markdown
 ## This is chapter 1
 
@@ -64,6 +51,20 @@ npm install Larry850806/cool-slide -g
 - 你好
 
 ```
+
+- step3: `cool-slide test.md test.html`
+
+- step4: open 'test.html' to see your slide
+
+## Documentation
+
+- use markdown syntax
+- use `---` to create new chapter
+- use `----` to create new slide in the same chapter
+
+## Example
+
+[click me to see demo.html](https://rawgit.com/Larry850806/cool-slide/master/demo.html)
 
 ## License
 
