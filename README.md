@@ -18,38 +18,29 @@ npm install Larry850806/cool-slide -g
 - step2: paste it to test.md
 
 ```markdown
-## This is chapter 1
-
+## This is chapter 1 ##
 ----
-
-## This is a slide in chapter 1
-
-----
-
-## Hello ~
+### This is a slide in chapter 1
 
 ---
 
 ## This is chapter 2
-
 ----
-
 ### You can put image in your slide
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/480px-JavaScript-logo.png)
-
 ----
-
-## You can also put some code and link
-
+### You can also put some code and link
 [click me](https://github.com/Larry850806)
-
+----
+### press <ESC> to see the slide structure
 ---
 
 # 你好
 ## 你好
 ### 你好
 - 你好
-
+----
+# END
 ```
 
 - step3: `cool-slide test.md test.html`
@@ -60,7 +51,7 @@ npm install Larry850806/cool-slide -g
 
 - use markdown syntax
 - use `---` to create new chapter
-- use `----` to create new slide in the same chapter
+- use `----` to create new slide in the chapter
 
 ## Example
 
