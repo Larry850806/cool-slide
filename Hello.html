@@ -6,21 +6,15 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="mobile-web-app-capable" content="yes">
         <title>Hello - HackMD</title>
-        <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
-        <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
         
-        <link rel="stylesheet" href="https://hackmd.io/vendor/reveal.js/css/reveal.css">
-        <link rel="stylesheet" href="https://hackmd.io/vendor/reveal.js/css/theme/black.css" id="theme">
+        <link rel="stylesheet" href="./src/reveal.css">
+        <link rel="stylesheet" href="./src/black.css" id="theme">
         <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="https://hackmd.io/vendor/reveal.js/lib/css/zenburn.css">
-        <link rel="stylesheet" href="https://hackmd.io/css/site.css">
-        <link rel="stylesheet" href="https://hackmd.io/css/slide.css">
+        <link rel="stylesheet" href="./src/zenburn.css">
+        <link rel="stylesheet" href="./src/site.css">
+        <link rel="stylesheet" href="./src/slide.css">
 
-        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
-        <script>
-          document.write( '<link rel="stylesheet" href="https://hackmd.io/vendor/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-        </script>
-		<script src="https://hackmd.io/vendor/jquery/dist/jquery.min.js"></script>
+		<script src="./src/jquery.min.js"></script>
     </head>
     <body>
 
@@ -45,12 +39,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 &lt;/style&gt;
 
-&lt;!-- .slide: data-transition=&quot;zoom&quot; --&gt;
+<!-- .slide: data-transition="zoom" -->
 # Hello
 </script></section><section  data-markdown><script type="text/template">
-&lt;!-- .slide: data-transition=&quot;zoom&quot; --&gt;
+<!-- .slide: data-transition="zoom" -->
 # 大家午安
-</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-transition="zoom" -->
 &lt;!-- .slide: data-transition=&quot;zoom&quot; --&gt;
 &lt;div class=&quot;js-img&quot;&gt;&lt;/div&gt;
 </script></section><section  data-markdown><script type="text/template">
@@ -91,7 +85,8 @@ h1, h2, h3, h4, h5, h6 {
 - 文章 + slide 一次滿足&lt;!-- .element: class=&quot;fragment&quot; data-fragment-index=&quot;3&quot; --&gt;
 - 用 web Present&lt;!-- .element: class=&quot;fragment&quot; data-fragment-index=&quot;4&quot; --&gt;
 - 帥&lt;!-- .element: class=&quot;fragment&quot; data-fragment-index=&quot;5&quot; --&gt;
-</script></section><section ><section data-markdown><script type="text/template">
+</script></section>
+<section ><section data-markdown><script type="text/template">
 # 還可以向下換頁
 
 ```
@@ -105,7 +100,8 @@ h1, h2, h3, h4, h5, h6 {
 &lt;!-- .element: class=&quot;fragment&quot; data-fragment-index=&quot;2&quot; --&gt;
 
 ↓
-</script></section><section data-markdown><script type="text/template">
+</script></section>
+<section data-markdown><script type="text/template">
 # 章節 / 小節範例
 
 
@@ -201,17 +197,18 @@ https://hackmd.io/
 *****
 Jacky.H.Hung
 
-hungjie19@gmail.com</script></section></div>
-        </div>
+hungjie19@gmail.com
 
-        <script src="https://hackmd.io/js/ga.js" async defer></script>
-        <script src="https://hackmd.io/js/newrelic.js" async defer></script>
-        <script src="https://hackmd.io/js/mixpanel.js" async defer></script>
-        <script src="https://hackmd.io/vendor/reveal.js/lib/js/head.min.js"></script>
-        <script src="https://hackmd.io/vendor/reveal.js/js/reveal.js"></script>
-        <script src="https://hackmd.io/vendor/string.min.js"></script>
-        <script src="https://hackmd.io/vendor/xss/dist/xss.min.js"></script>
-        <script src="https://hackmd.io/js/render.js"></script>
+</script></section></div></div>
+
+        <script src="./src/ga.js" async defer></script>
+        <script src="./src/newrelic.js" async defer></script>
+        <script src="./src/mixpanel.js" async defer></script>
+        <script src="./src/head.min.js"></script>
+        <script src="./src/reveal.js"></script>
+        <script src="./src/string.min.js"></script>
+        <script src="./src/xss.min.js"></script>
+        <script src="./src/render.js"></script>
 
         <script>
             if (typeof mixpanel !== 'undefined') mixpanel.track("enter slide");
@@ -234,12 +231,12 @@ hungjie19@gmail.com</script></section></div>
 
             // Optional libraries used to extend on reveal.js
             var deps = [
-              { src: 'https://hackmd.io/vendor/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-              { src: 'https://hackmd.io/vendor/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-              { src: 'https://hackmd.io/js/reveal-markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-              { src: 'https://hackmd.io/vendor/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-              { src: 'https://hackmd.io/vendor/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-              { src: 'https://hackmd.io/vendor/reveal.js/plugin/math/math.js', async: true }
+              { src: './src/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './src/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './src/reveal-markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './src/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './src/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+              { src: './src/math.js', async: true }
             ];
 
             // default options to init reveal.js
