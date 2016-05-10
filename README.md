@@ -27,6 +27,8 @@ npm install Larry850806/cool-slide -g
 
 ## Example
 
+[click me to see demo.html](https://rawgit.com/Larry850806/cool-slide/master/demo.html)
+
 + demo.md:
 ```markdown
 
@@ -52,9 +54,6 @@ npm install Larry850806/cool-slide -g
 - test4
 
 ```
-
-[demo.html](https://rawgit.com/Larry850806/cool-slide/master/demo.html)
-
 
 ## License
 
