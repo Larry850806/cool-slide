@@ -2,12 +2,12 @@
   "name": "cool-slide",
   "version": "1.0.0",
   "description": "a terminal app to make cool slide",
-  "main": "index",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-      "cool-slide": "./index"
+      "cool-slide": "./index.js"
   },
   "author": "Larry Lu",
   "license": "ISC"
