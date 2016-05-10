@@ -24,10 +24,6 @@ npm install Larry850806/cool-slide -g
 
 ## This is a slide in chapter 1
 
-----
-
-## Hello ~
-
 ---
 
 ## This is chapter 2
@@ -39,7 +35,7 @@ npm install Larry850806/cool-slide -g
 
 ----
 
-## You can also put some code and link
+### You can also put some code and link
 
 [click me](https://github.com/Larry850806)
 
