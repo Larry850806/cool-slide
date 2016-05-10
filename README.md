@@ -47,15 +47,11 @@ npm install Larry850806/cool-slide -g
 
 - step4: open 'test.html' to see your slide
 
+[click me to see demo.html](https://rawgit.com/Larry850806/cool-slide/master/demo.html)
+
 ## Documentation
 
-- use markdown syntax
-- use `---` to create new chapter
-- use `----` to create new slide in the chapter
-
-## Example
-
-[click me to see demo.html](https://rawgit.com/Larry850806/cool-slide/master/demo.html)
+[Documentation](https://rawgit.com/Larry850806/cool-slide/master/teach.html)
 
 ## License
 
