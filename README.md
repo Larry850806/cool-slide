@@ -54,11 +54,6 @@ npm install Larry850806/cool-slide -g
 
 ## You can also put some code and link
 
-\`\`\`js
-function(){
-    console.log('Hello World');
-}
-\`\`\`
 [click me](https://github.com/Larry850806)
 
 ---
