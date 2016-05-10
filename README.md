@@ -47,11 +47,11 @@ npm install Larry850806/cool-slide -g
 
 - step4: open 'test.html' to see your slide
 
-[click me to see demo.html](https://rawgit.com/Larry850806/cool-slide/master/demo.html)
+[click me to see demo.html](https://rawgit.com/Larry850806/cool-slide/master/demo/demo.html)
 
 ## Documentation
 
-[Documentation](https://rawgit.com/Larry850806/cool-slide/master/teach.html)
+[Documentation](https://rawgit.com/Larry850806/cool-slide/master/demo/teach.html)
 
 ## License
 
