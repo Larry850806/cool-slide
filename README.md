@@ -51,11 +51,8 @@ npm install Larry850806/cool-slide -g
 
 ## Documentation
 
-```
-use --- to add a new chapter
-use ---- to add a slide in the chapter
-```
-
+`---` add a new chapter <br>
+`----` add a slide in the chapter <br>
 
 [Documentation](https://rawgit.com/Larry850806/cool-slide/master/demo/teach.html)
 
