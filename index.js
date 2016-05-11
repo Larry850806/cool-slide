@@ -11,6 +11,29 @@ if(!htmlname){
 }
 
 var output = new Output(htmlname);
-var input = new Input(mdname, output);
-input.process();
+
+var funcMap = [];
+
+funcMap['---'] = function(line){
+    output.addNewChapter();
+    output.addNewSlide();
+};
+
+funcMap['----'] = function(line){
+    output.addNewSlide();
+};
+
+var funcDefault = function(line){
+    output.addStrIntoSlide(line);
+};
+
+var funcPrintHTML = function(){
+    output.printHTML();
+};
+
+var input = new Input(mdname);
+input.process(funcMap, funcDefault, funcPrintHTML);
+
+
+
 

@@ -3,31 +3,21 @@ var readline = require('readline');
 
 module.exports = function(infile, output){
 
-    this.process = function(){
+    this.process = function(funcMap, funcDefault, funcPrintHTML){
 
         var rl = readline.createInterface({
               input: fs.createReadStream(infile)
         });
 
         rl.on('line', function(line){
-
-            if(line === '---'){
-                
-                output.addNewChapter();
-                output.addNewSlide();
-
-            } else if(line === '----'){
-                
-                output.addNewSlide();
-
-            } else {
-
-                output.addStrIntoSlide(line);
-            }
+            
+            var func = funcMap[line];
+            if(!func) func = funcDefault;
+            func(line);
 
         }).on('close', function(){
 
-            output.printHTML();
+            funcPrintHTML();
 
         });
 
