@@ -1,18 +1,50 @@
+<!DOCTYPE HTML>
 <html>
     <head>
-        <link rel="stylesheet" href="../src/reveal.css">
-        <link rel="stylesheet" href="../src/black.css">
+        <link rel="stylesheet" href="../src/reveal/css/reveal.css">
+        <link rel="stylesheet" href="../src/reveal/css/theme/black.css">
     </head>
     <body>
         <div class="reveal">
             <div class="slides">
-                <section>Slide 1</section>
-                <section>Slide 2</section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Page title
+
+                        A paragraph with some text and a [link](http://hakim.se).
+                    </script>
+                </section>
+
             </div>
         </div>
-        <script src="../src/reveal.js"></script>
+        <script src="../src/reveal/js/reveal.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
         <script>
-Reveal.initialize();
+
+            Reveal.initialize({
+                dependencies: [
+                    // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+                    { src: '../src/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+                    // Interpret Markdown in <section> elements
+                    { src: '../src/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../src/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+                    // Syntax highlight for <code> elements
+                    { src: '../src/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+                    // Zoom in and out with Alt+click
+                    { src: '../src/reveal/plugin/zoom-js/zoom.js', async: true },
+
+                    // Speaker notes
+                    { src: '../src/reveal/plugin/notes/notes.js', async: true },
+
+                    // MathJax
+                    { src: '../src/reveal/plugin/math/math.js', async: true }
+                ]
+            });
+
         </script>
     </body>
 </html>
