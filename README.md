@@ -11,7 +11,7 @@
 npm install Larry850806/cool-slide -g
 ```
 
-## Usage
+## Example
 
 - step1: create a file 'test.md'
 
@@ -32,7 +32,7 @@ npm install Larry850806/cool-slide -g
 ### You can also put some code and link
 [click me](https://github.com/Larry850806)
 ----
-### press <ESC> to see the slide structure
+### press ESC to see the slide structure
 ---
 
 # 你好
@@ -55,6 +55,9 @@ npm install Larry850806/cool-slide -g
 `----` add a slide in the chapter <br>
 
 [Documentation](https://rawgit.com/Larry850806/cool-slide/master/demo/teach.html)
+
+## UML Diagram
+![](http://imgur.com/8ZlAhDP)
 
 ## License
 
