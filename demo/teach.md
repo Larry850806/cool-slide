@@ -27,7 +27,7 @@ use ---- to create new slide in the chapter
 ```
 ### ↓
 ----
-## press <ESC> to see the structure
+## press ESC to see the structure
 ----
 # Is it cool?
 

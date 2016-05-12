@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://rawgit.com/Larry850806/cool-slide/master/src/reveal/css/reveal.css">
+        <link rel="stylesheet" href="https://rawgit.com/Larry850806/cool-slide/master/src/reveal/css/theme/black.css">
+        <link rel="stylesheet" href="https://rawgit.com/Larry850806/cool-slide/master/src/reveal/lib/css/zenburn2.css">
+        <link rel="stylesheet" href="https://rawgit.com/Larry850806/cool-slide/master/src/other/site.css">
+        <link rel="stylesheet" href="https://rawgit.com/Larry850806/cool-slide/master/src/other/slide.css">
+    </head>
+    <body>
+        <div class="reveal"><div class="slides">
+
+            <style>
+            .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", Meiryo, "ＭＳ ゴシック", "MS Gothic", sans-serif;}h1, h2, h3, h4, h5, h6 {text-transform: none !important;}
+            </style>
+
+<section ><section data-markdown><script type="text/template">
+## This is chapter 1
+
+
+</script></section>
+<section  data-markdown><script type="text/template">
+
+## This is a slide in chapter 1
+
+
+</script></section>
+<section  data-markdown><script type="text/template">
+
+## Hello ~ 
+
+
+</script></section></section>
+<section ><section data-markdown><script type="text/template">
+
+## This is chapter 2
+
+
+</script></section>
+<section  data-markdown><script type="text/template">
+
+### You can put image in your slide
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/480px-JavaScript-logo.png)
+
+
+</script></section>
+<section  data-markdown><script type="text/template">
+
+## You can also put some code and link
+
+```js
+function(){
+    console.log('Hello World');
+}
+```
+[click me](https://github.com/Larry850806)
+
+
+</script></section></section>
+<section ><section data-markdown><script type="text/template">
+
+# 你好
+## 你好
+### 你好
+- 你好
+
+
+</script></section>
+<section  data-markdown><script type="text/template">
+
+# END
+
+</script></section></section>
+        </div></div>
+        <script src="https://rawgit.com/Larry850806/cool-slide/master/src/reveal/js/reveal.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
+        <script>
+
+            Reveal.initialize({
+                dependencies: [
+                    // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+                    { src: 'https://rawgit.com/Larry850806/cool-slide/master/src/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+                    // Interpret Markdown in <section> elements
+                    { src: 'https://rawgit.com/Larry850806/cool-slide/master/src/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'https://rawgit.com/Larry850806/cool-slide/master/src/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+                    // Syntax highlight for <code> elements
+                    { src: 'https://rawgit.com/Larry850806/cool-slide/master/src/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+                    // Zoom in and out with Alt+click
+                    { src: 'https://rawgit.com/Larry850806/cool-slide/master/src/reveal/plugin/zoom-js/zoom.js', async: true },
+
+                    // Speaker notes
+                    { src: 'https://rawgit.com/Larry850806/cool-slide/master/src/reveal/plugin/notes/notes.js', async: true },
+
+                    // MathJax
+                    { src: 'https://rawgit.com/Larry850806/cool-slide/master/src/reveal/plugin/math/math.js', async: true }
+                ]
+            });
+
+        </script>
+    </body>
+</html>
+
