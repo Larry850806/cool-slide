@@ -9,8 +9,8 @@ var chapterTail = '</script></section></section>';
 
 module.exports = function(outFile){
 
-    var head = fs.readFileSync('./src/outputHTML/head.html').toString();
-    var tail = fs.readFileSync('./src/outputHTML/tail.html').toString();
+    var head = fs.readFileSync(__dirname + '/src/outputHTML/head.html').toString();
+    var tail = fs.readFileSync(__dirname + '/src/outputHTML/tail.html').toString();
 
     var structure = [];
 
