@@ -57,7 +57,7 @@ npm install Larry850806/cool-slide -g
 [Documentation](https://rawgit.com/Larry850806/cool-slide/master/demo/teach.html)
 
 ## UML Diagram
-![](http://imgur.com/8ZlAhDP)
+![](http://imgur.com/8ZlAhDP.png)
 
 ## License
 
