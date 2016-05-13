@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 var Output = require('./output');
 var Input = require('./input');
+var compress = require('./compress');
 
 var mdname = process.argv[2];
 var htmlname = process.argv[3];
@@ -27,13 +28,14 @@ var funcDefault = function(line){
     output.addStrIntoSlide(line);
 };
 
-var funcPrintHTML = function(){
-    output.printHTML();
+var funcPrintHTML = function(callback){
+    output.printHTML(callback);
 };
 
 var input = new Input(mdname);
-input.process(funcMap, funcDefault, funcPrintHTML);
-
-
+input.process(funcMap, funcDefault, funcPrintHTML, function(){
+    console.log('123');
+    compress(htmlname);
+});
 
 

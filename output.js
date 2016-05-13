@@ -15,8 +15,8 @@ module.exports = function(outFile){
     var structure = [];
 
     var out_file = fs.createWriteStream(outFile, {flags : 'w'});
-    console.output = function(d) { //
-        out_file.write(util.format(d) + '\n');
+    console.output = function(d, callback) { //
+        out_file.write(util.format(d) + '\n', 'utf8', callback);
     };
 
 
@@ -40,7 +40,7 @@ module.exports = function(outFile){
         }
     };
 
-    this.printHTML = function(){
+    this.printHTML = function(callback){
         console.output(head);
 
         for(var i in structure){
@@ -57,7 +57,7 @@ module.exports = function(outFile){
             console.output(chapterTail);
         }
 
-        console.output(tail);
+        console.output(tail, callback);
 
     };
 

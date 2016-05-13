@@ -3,7 +3,7 @@ var readline = require('readline');
 
 module.exports = function(infile, output){
 
-    this.process = function(funcMap, funcDefault, funcPrintHTML){
+    this.process = function(funcMap, funcDefault, funcPrintHTML, callback){
 
         var rl = readline.createInterface({
               input: fs.createReadStream(infile)
@@ -17,7 +17,7 @@ module.exports = function(infile, output){
 
         }).on('close', function(){
 
-            funcPrintHTML();
+            funcPrintHTML(callback);
 
         });
 

@@ -1,14 +1,17 @@
 {
   "name": "cool-slide",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "a terminal app to make cool slide",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-      "cool-slide": "./index.js"
+    "cool-slide": "./index.js"
   },
   "author": "Larry Lu",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "html-minifier": "^2.1.2"
+  }
 }
