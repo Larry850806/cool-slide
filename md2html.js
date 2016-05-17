@@ -12,6 +12,10 @@ var md2html = function(str){
 
         return '<h3>' + str.substring(3) + '</h3>';
 
+    } else if(str.match(/^-.*$/)){          // - item  ->  <ul><li> item </li></ul>
+
+        return '<ul><li>' + str.substring(1) + '</li></ul>'
+
     } else {
         
         return str;
