@@ -1,6 +1,7 @@
 var fs = require('fs');
 var util = require('util');
 var path = require('path');
+var md2html = require('./md2html');
 
 var slideHead = '<section>';
 var slideTail = '</section>';
@@ -31,6 +32,7 @@ module.exports = function(outFile){
     };
 
     this.addStrIntoSlide = function(str){
+        str = md2html(str);
         var i = structure.length - 1;
         var j = structure[i].length - 1;
         if(!structure[i][j]){
