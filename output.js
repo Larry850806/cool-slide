@@ -2,10 +2,10 @@ var fs = require('fs');
 var util = require('util');
 var path = require('path');
 
-var slideHead = '<section  data-markdown><script type="text/template">';
-var slideTail = '</script></section>';
-var chapterHead = '<section ><section data-markdown><script type="text/template">';
-var chapterTail = '</script></section></section>';
+var slideHead = '<section>';
+var slideTail = '</section>';
+var chapterHead = '<section><section>';
+var chapterTail = '</section></section>';
 
 module.exports = function(outFile){
 

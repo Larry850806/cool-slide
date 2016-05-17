@@ -34,7 +34,7 @@ var funcPrintHTML = function(callback){
 
 var input = new Input(mdname);
 input.process(funcMap, funcDefault, funcPrintHTML, function(){
-    compress(htmlname);
+    // compress(htmlname);
     console.log('success');
 });
 
