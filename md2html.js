@@ -23,7 +23,6 @@ var current_mode = NORMAL_MODE;
 
 var md2html = function(str){
 
-
     if(str.match(/^#[^#].*$/)){             // # Hello  ->  <h1> Hello </h1>
 
         str = '<h1>' + str.substring(1) + '</h1>';
@@ -52,9 +51,9 @@ var md2html = function(str){
 
         str = '<a href="' + url + '" style="font-size: 55px"> ' + text + ' </a>';
 
-    } else if(str.match(/^-.*$/)){          // - item1  ->  <ul><li> item1 </li>
-                                            // - item2  ->      <li> item2 </li>
-                                            // - item3  ->      <li> item3 </li></ul>
+    } else if(str.match(/^- .*$/)){          // - item1  ->  <ul><li> item1 </li>
+                                             // - item2  ->      <li> item2 </li>
+                                             // - item3  ->      <li> item3 </li></ul>
         if(current_mode == LIST_MODE){
             var deleteEndul = mode_buffer.substring(0, mode_buffer.length-6);
             mode_buffer = deleteEndul + '\n<li>' + str.substring(1) + '</li>\n</ul>'
@@ -64,7 +63,7 @@ var md2html = function(str){
         }
         return '';
 
-    } else if(str.match(/^```.*$/)){                // ```                      
+    } else if(str.match(/^```/)){                   // ```                      
                                                     // function(){              ->  <pre><code>function(){     
         if(current_mode == CODE_MODE){              //     var a = 123;         ->  var a = 123;                    
             current_mode = NORMAL_MODE;             //     console.log('123');  ->  console.log('123');
