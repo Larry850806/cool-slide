@@ -1,8 +1,17 @@
 var process = function(str){
-    if(str.match(/^#[^#].*$/)) return '<h1>' + str.substring(1) + '</h1>';
-    if(str.match(/^##[^#].*$/)) return '<h2>' + str.substring(2) + '</h2>';
-    if(str.match(/^###[^#].*$/)) return '<h3>' + str.substring(3) + '</h3>';
-    return 'format error';
+    var rst = {
+        nextMode: 0,  // NORMAL_MODE
+        err: false,
+        str: null
+    }
+
+    if(str.match(/^#[^#].*$/)) rst.str = '<h1>' + str.substring(1) + '</h1>';
+    else if(str.match(/^##[^#].*$/)) rst.str = '<h2>' + str.substring(2) + '</h2>';
+    else if(str.match(/^###[^#].*$/)) rst.str = '<h3>' + str.substring(3) + '</h3>';
+
+    if(!rst.str) rst.err = true;
+    return rst;
+
     // # Hello  ->  <h1> Hello </h1>
     // ## Hello  ->  <h2> Hello </h2>
     // ### Hello  ->  <h3> Hello </h3>

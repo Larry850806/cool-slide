@@ -9,24 +9,55 @@ const LINK_MODE = 3;
 const LIST_MODE = 4;
 const CODE_MODE = 5;
 
-var mode_buffer = '';
 var current_mode = NORMAL_MODE;
+
+var mode2fun = {};
+mode2fun[HEADER_MODE] = header;
+mode2fun[PICTURE_MODE] = picture;
+mode2fun[LINK_MODE] = link;
+
+var regex2mode = function(str){
+    if(str.match(/^#.*$/)) return HEADER_MODE;
+    if(str.match(/^!\[\](.+)$/)) return PICTURE_MODE
+    if(str.match(/^\[.+\](.+)$/)) return LINK_MODE;
+    return NORMAL_MODE;
+};
 
 var md2html = function(str){
 
-    if(str.match(/^#.*$/)){
+    var rst = {};
+    
+    while(1){
 
-        str = header(str);
+        // var rst = {
+        //     nextMode,    // A kind of mode
+        //     err,         // true or false
+        //     str          // return string
+        // }
 
-    } else if(str.match(/^!\[\](.+)$/)){
+        if(current_mode == NORMAL_MODE){
+            current_mode = regex2mode(str);
+            if(current_mode == NORMAL_MODE){
+                return str;
+            }
+        } else {
+            var fun = mode2fun[current_mode];
+            rst = fun(str);
+            current_mode = rst.nextMode;
+            if(rst.err){
+                continue; 
+            } else {
+                return rst.str;
+            }
+        }
 
-        str = picture(str);
+    }
 
-    } else if(str.match(/^\[.+\](.+)$/)){
 
-        str = link(str);
 
-    } else if(str.match(/^- .*$/)){         
+/*
+
+    if(str.match(/^- .*$/)){         
         // - item1  ->  <ul><li> item1 </li>
         // - item2  ->      <li> item2 </li>
         // - item3  ->      <li> item3 </li></ul>
@@ -62,7 +93,7 @@ var md2html = function(str){
         str = mode_buffer + '\n' + str;
         mode_buffer = '';
     }
-
+*/
     return str;
 }
 
