@@ -1,7 +1,8 @@
 var header = require('./core/header');
 var picture = require('./core/picture');
 var link = require('./core/link');
-//var list = require('./core/list');
+var list = require('./core/list');
+var code = require('./core/code');
 
 const NORMAL_MODE = 0;
 const HEADER_MODE = 1;
@@ -16,17 +17,19 @@ var mode2fun = {};
 mode2fun[HEADER_MODE] = header;
 mode2fun[PICTURE_MODE] = picture;
 mode2fun[LINK_MODE] = link;
-//mode2fun[LIST_MODE] = list;
+mode2fun[LIST_MODE] = list;
+mode2fun[CODE_MODE] = code;
 
 var regex2mode = function(str){
     if(str.match(/^#.*$/)) return HEADER_MODE;
     if(str.match(/^!\[\](.+)$/)) return PICTURE_MODE
     if(str.match(/^\[.+\](.+)$/)) return LINK_MODE;
-    //if(str.match(/^- .*$/)) return LIST_MODE;
+    if(str.match(/^- .*$/)) return LIST_MODE;
+    if(str.match(/^```/)) return CODE_MODE;
     return NORMAL_MODE;
 };
 
-var md2html = function(str){
+var md2html = function(str, callback){
 
     var rst = {};
     
@@ -41,48 +44,20 @@ var md2html = function(str){
         if(current_mode == NORMAL_MODE){
             current_mode = regex2mode(str);
             if(current_mode == NORMAL_MODE){
-                return str;
+                callback(str);
+                break;
             }
         } else {
             var fun = mode2fun[current_mode];
             rst = fun(str);
+
             current_mode = rst.nextMode;
-            if(rst.err){
-                continue; 
-            } else {
-                return rst.str;
-            }
+            if(rst.str) callback(rst.str);
+            if(!rst.err) break; 
         }
 
     }
 
-
-
-/*
-    } else if(str.match(/^```/)){                   // ```                      
-                                                    // function(){              ->  <pre><code>function(){     
-        if(current_mode == CODE_MODE){              //     var a = 123;         ->  var a = 123;                    
-            current_mode = NORMAL_MODE;             //     console.log('123');  ->  console.log('123');
-            return mode_buffer + '</code></pre>';   // }                        ->  </code></pre>
-        } else {                                    // ```                     
-            current_mode = CODE_MODE;
-            mode_buffer = '<pre><code>';
-            return '';
-        }
-
-    }
-
-    if(current_mode == CODE_MODE){
-        mode_buffer += str + '\n';
-        return '';
-    }
-
-    if(current_mode != NORMAL_MODE){
-        current_mode = NORMAL_MODE;
-        str = mode_buffer + '\n' + str;
-        mode_buffer = '';
-    }
-*/
     return str;
 }
 
