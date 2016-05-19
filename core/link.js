@@ -1,3 +1,5 @@
+// [Click Me](url)  ->  <a href="url"> Click Me </a>
+
 var process = function(str){
     var rst = {
         nextMode: 0,  // NORMAL_MODE
@@ -19,8 +21,6 @@ var process = function(str){
 
     if(!rst.str) rst.err = true;
     return rst;
-    
-    // [Click Me](url)  ->  <a href="url"> Click Me </a>
 };
 
 module.exports = process;

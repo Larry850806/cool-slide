@@ -1,3 +1,5 @@
+// ![](image.jpg)  ->  <img src="image.jpg"><br>
+
 var process = function(str){
     var rst = {
         nextMode: 0,  // NORMAL_MODE
@@ -7,13 +9,11 @@ var process = function(str){
 
     if(str.match(/^!\[\](.+)$/)){
         var src = str.substring(4, str.length - 1);
-        rst.str = '<img src="' + src + '">';
+        rst.str = '<img src="' + src + '"><br>';
     }
 
     if(!rst.str) rst.err = true;
     return rst;
-
-    // ![](image.jpg)  ->  <img src="image.jpg">
 };
 
 module.exports = process;

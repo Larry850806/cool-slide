@@ -1,3 +1,7 @@
+// - item1  ->  <ul><li> item1 </li>
+// - item2  ->      <li> item2 </li>
+// - item3  ->      <li> item3 </li></ul>
+
 var isFirst = true;
 var buffer;
 
@@ -25,14 +29,11 @@ var process = function(str){
 
     } else {
         rst.err = true;
-        rst.str = '</ul>'
+        rst.str = '</ul>';
+        isFirst = true;
     }
 
     return rst;
-
-    // - item1  ->  <ul><li> item1 </li>
-    // - item2  ->      <li> item2 </li>
-    // - item3  ->      <li> item3 </li></ul>
 }
 
 module.exports = process;

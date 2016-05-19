@@ -33,13 +33,13 @@ var md2html = function(str, callback){
 
     var rst = {};
     
-    while(1){
+    // var rst = {
+    //     nextMode,    // A kind of mode
+    //     err,         // true or false
+    //     str          // return string
+    // }
 
-        // var rst = {
-        //     nextMode,    // A kind of mode
-        //     err,         // true or false
-        //     str          // return string
-        // }
+    while(1){
 
         if(current_mode == NORMAL_MODE){
             current_mode = regex2mode(str);
@@ -62,3 +62,4 @@ var md2html = function(str, callback){
 }
 
 module.exports = md2html;
+

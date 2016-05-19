@@ -1,3 +1,7 @@
+// # Hello  ->  <h1> Hello </h1>
+// ## Hello  ->  <h2> Hello </h2>
+// ### Hello  ->  <h3> Hello </h3>
+
 var process = function(str){
     var rst = {
         nextMode: 0,  // NORMAL_MODE
@@ -11,10 +15,6 @@ var process = function(str){
 
     if(!rst.str) rst.err = true;
     return rst;
-
-    // # Hello  ->  <h1> Hello </h1>
-    // ## Hello  ->  <h2> Hello </h2>
-    // ### Hello  ->  <h3> Hello </h3>
 }
 
 module.exports = process;

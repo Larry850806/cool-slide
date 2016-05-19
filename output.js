@@ -31,15 +31,17 @@ module.exports = function(outFile){
         structure[index].push([]);
     };
 
-    this.addStrIntoSlide = function(str){
-        str = md2html(str);
-        var i = structure.length - 1;
-        var j = structure[i].length - 1;
-        if(!structure[i][j]){
-            structure[i][j] = (str + '\n');
-        } else {
-            structure[i][j] += (str + '\n');
-        }
+    // need to prevent async
+    this.addStrIntoSlide = function(mdStr){
+        md2html(mdStr, function(htmlStr){
+            var i = structure.length - 1;
+            var j = structure[i].length - 1;
+            if(!structure[i][j]){
+                structure[i][j] = (htmlStr + '\n');
+            } else {
+                structure[i][j] += (htmlStr + '\n');
+            }
+        });
     };
 
     this.printHTML = function(callback){
