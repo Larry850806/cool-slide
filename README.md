@@ -76,7 +76,7 @@ npm install Larry850806/cool-slide -g
 - step4: open 'test.html' to see your slide
 
 # UML Diagram
-![](http://imgur.com/8ZlAhDP.png)
+![](http://imgur.com/qXfy4lz.png)
 
 # License
 
