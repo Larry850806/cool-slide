@@ -4,6 +4,12 @@
         <link rel="stylesheet" href="https://rawgit.com/Larry850806/cool-slide/2f1591a/src/reveal/css/reveal.css">
         <link rel="stylesheet" href="https://rawgit.com/Larry850806/cool-slide/2f1591a/src/reveal/css/theme/black.css">
         <link rel="stylesheet" href="https://rawgit.com/isagalaev/highlight.js/master/src/styles/dracula.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+        <script>
+            
+        </script>
+
     </head>
     <body>
         <div class="reveal">
@@ -14,8 +20,27 @@
                 </style>
 
 <section><section>
-<h2> This is chapter 1</h2>
 
+<h1> 1 + 1 = ? </h1>
+<h3 class="ans wrong"> 4 </h3>
+<h3 class="ans wrong"> 3 </h3>
+<h3 class="ans correct"> 2 </h3>
+<h3 class="ans wrong"> 1 </h3>
+<script>
+    $('.ans').css('background-color', 'blue');
+
+    $('.wrong').click(function(event){
+        $('.correct').css('background-color', 'green'); 
+        $('.wrong').css('background-color', 'red');
+        alert('You click ' + $(event.target).text() + ', You are stupid.');
+    });
+
+    $('.correct').click(function(event){
+        $('.correct').css('background-color', 'green'); 
+        $('.wrong').css('background-color', 'red'); 
+        alert('You click ' + $(event.target).text() + ', You are smart.');
+    });
+</script>
 
 </section>
 <section>
