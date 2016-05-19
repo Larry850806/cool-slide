@@ -1,17 +1,45 @@
-# Quick Start Guide
-
-## Requirement
+# Requirement
 
 - `node >= 4.4.1`
 - `npm >= 3.8.7`
 
-## Install
+# Install
 
 ```
 npm install Larry850806/cool-slide -g
 ```
+# Documentation
 
-## Example
+### new chapter
+`---`
+### new slide in the chapter
+`----`
+### text
+```
+# Hello
+## Hello
+### Hello
+```
+### picture
+`![](http://path/to/image.jpg)`
+### link
+`[Click Me](url)`
+### list
+```
+- item1
+- item2
+- item3
+```
+### code
+```
+(remove the comment)
+// ```
+// function(){
+//     console.log('123');
+// }
+// ```
+```
+# Example
 
 - step1: create a file 'test.md'
 
@@ -47,19 +75,10 @@ npm install Larry850806/cool-slide -g
 
 - step4: open 'test.html' to see your slide
 
-[click me to see demo.html](https://rawgit.com/Larry850806/cool-slide/master/demo/demo.html)
+# UML Diagram
+![](http://imgur.com/qXfy4lz.png)
 
-## Documentation
-
-`---` add a new chapter <br>
-`----` add a slide in the chapter <br>
-
-[Documentation](https://rawgit.com/Larry850806/cool-slide/master/demo/teach.html)
-
-## UML Diagram
-![](http://imgur.com/8ZlAhDP.png)
-
-## License
+# License
 
 The MIT License (MIT)
 
