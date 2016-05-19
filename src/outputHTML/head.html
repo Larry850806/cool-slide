@@ -5,25 +5,7 @@
         <link rel="stylesheet" href="https://rawgit.com/Larry850806/cool-slide/2f1591a/src/reveal/css/theme/black.css">
         <link rel="stylesheet" href="https://rawgit.com/isagalaev/highlight.js/master/src/styles/dracula.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
-        <script>
-            var setAnsAttr = function(allAns, wrongAns, correctAns){
-                allAns.css('background-color', '#00CC66');
-                console.log(allAns);
-                //$('.ans').css('background-color', '#EED19C');
-                wrongAns.click(function(event){
-                    wrongAns.css('background-color', 'red');
-                    alert('你選了' + $(event.target).text() +'，答錯了');
-                    allAns.unbind('click');
-                });
-
-                correctAns.click(function(event){
-                    wrongAns.css('background-color', 'red'); 
-                    alert('你選了' + $(event.target).text() +'，你好聰明.');
-                    allAns.unbind('click');
-                });
-            }
-        </script>
+        <script src="https://rawgit.com/Larry850806/cool-slide/eece5b5/src/outputHTML/question.js"></script>
     </head>
     <body>
         <div class="reveal">
