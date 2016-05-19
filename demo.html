@@ -8,7 +8,7 @@
 
         <script>
             var setAnsAttr = function(allAns, wrongAns, correctAns){
-                allAns.css('background-color', '#00CC66');
+                allAns.css('background-color', '#9F88FF');
                 //$('.ans').css('background-color', '#EED19C');
                 wrongAns.click(function(event){
                     wrongAns.css('background-color', 'red');
@@ -17,7 +17,7 @@
                 });
 
                 correctAns.click(function(event){
-                    wrongAns.css('background-color', 'red'); 
+                    wrongAns.css('background-color', '#00FF00');
                     alert('你選了' + $(event.target).text() +'，你好聰明.');
                     allAns.unbind('click');
                 });
@@ -74,4 +74,3 @@ hljs.initHighlightingOnLoad();
 </script>
 </body>
 </html>
-
