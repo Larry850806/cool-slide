@@ -1,7 +1,8 @@
+### cool-slide is a command line tool. It can be used to make a cool slide in very easy syntax. 
+
 # Requirement
 
-- `node >= 4.4.1`
-- `npm >= 3.8.7`
+- `node >= 0.12.7`
 
 # Install
 
@@ -39,6 +40,15 @@ npm install Larry850806/cool-slide -g
 // }
 // ```
 ```
+### Question
+```
+[Q] 1 + 1 = ?
+[A] 1
+[A#] 2
+[A] 3
+[A] 4
+```
+
 # Example
 
 - step1: create a file 'test.md'
