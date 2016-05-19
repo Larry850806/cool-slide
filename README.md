@@ -81,7 +81,7 @@ npm install Larry850806/cool-slide -g
 # END
 ```
 
-- step3: `cool-slide test.md test.html`
+- step3: `cool-slide test.md test.html  // generate test.html from test.md`
 
 - step4: open 'test.html' to see your slide
 
