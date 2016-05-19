@@ -7,17 +7,15 @@ var process = function(str){
         str: null
     }
 
-    if(str.match(/^\[.+\](.+)$/)){   
-        var leftBigIndex = str.indexOf('[');
-        var rightBigIndex = str.indexOf(']');
-        var leftSmallIndex = str.indexOf('(');
-        var rightSmallIndex = str.indexOf(')');
+    var leftBigIndex = str.indexOf('[');
+    var rightBigIndex = str.indexOf(']');
+    var leftSmallIndex = str.indexOf('(');
+    var rightSmallIndex = str.indexOf(')');
 
-        var url = str.substring(leftSmallIndex + 1, rightSmallIndex);
-        var text = str.substring(leftBigIndex + 1, rightBigIndex);
+    var url = str.substring(leftSmallIndex + 1, rightSmallIndex);
+    var text = str.substring(leftBigIndex + 1, rightBigIndex);
 
-        rst.str = '<a href="' + url + '" style="font-size: 55px"> ' + text + ' </a>';
-    }
+    rst.str = '<a href="' + url + '" style="font-size: 55px"> ' + text + ' </a>';
 
     if(!rst.str) rst.err = true;
     return rst;

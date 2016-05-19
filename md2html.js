@@ -3,6 +3,7 @@ var picture = require('./core/picture');
 var link = require('./core/link');
 var list = require('./core/list');
 var code = require('./core/code');
+var question = require('./core/question');
 
 const NORMAL_MODE = 0;
 const HEADER_MODE = 1;
@@ -10,6 +11,7 @@ const PICTURE_MODE = 2;
 const LINK_MODE = 3;
 const LIST_MODE = 4;
 const CODE_MODE = 5;
+const QUESTION_MODE = 6;
 
 var current_mode = NORMAL_MODE;
 
@@ -19,13 +21,15 @@ mode2fun[PICTURE_MODE] = picture;
 mode2fun[LINK_MODE] = link;
 mode2fun[LIST_MODE] = list;
 mode2fun[CODE_MODE] = code;
+mode2fun[QUESTION_MODE] = question;
 
 var regex2mode = function(str){
     if(str.match(/^#.*$/)) return HEADER_MODE;
-    if(str.match(/^!\[\](.+)$/)) return PICTURE_MODE
-    if(str.match(/^\[.+\](.+)$/)) return LINK_MODE;
+    if(str.match(/^!\[\]\(.+\)$/)) return PICTURE_MODE
+    if(str.match(/^\[.+\]\(.+\)$/)) return LINK_MODE;
     if(str.match(/^- .*$/)) return LIST_MODE;
     if(str.match(/^```/)) return CODE_MODE;
+    if(str.match(/^\[Q\]/)) return QUESTION_MODE;
     return NORMAL_MODE;
 };
 

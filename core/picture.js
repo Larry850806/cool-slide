@@ -7,10 +7,8 @@ var process = function(str){
         str: null
     }
 
-    if(str.match(/^!\[\](.+)$/)){
-        var src = str.substring(4, str.length - 1);
-        rst.str = '<img src="' + src + '"><br>';
-    }
+    var src = str.substring(4, str.length - 1);
+    rst.str = '<img src="' + src + '"><br>';
 
     if(!rst.str) rst.err = true;
     return rst;

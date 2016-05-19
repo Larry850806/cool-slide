@@ -7,9 +7,22 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
         <script>
-            
-        </script>
+            var setAnsAttr = function(allAns, wrongAns, correctAns){
+                allAns.css('background-color', '#00CC66');
+                //$('.ans').css('background-color', '#EED19C');
+                wrongAns.click(function(event){
+                    wrongAns.css('background-color', 'red');
+                    alert('你選了' + $(event.target).text() +'，你是智障嗎');
+                    allAns.unbind('click');
+                });
 
+                correctAns.click(function(event){
+                    wrongAns.css('background-color', 'red'); 
+                    alert('你選了' + $(event.target).text() +'，你好聰明.');
+                    allAns.unbind('click');
+                });
+            }
+        </script>
     </head>
     <body>
         <div class="reveal">
@@ -20,85 +33,35 @@
                 </style>
 
 <section><section>
-
-<h1> 1 + 1 = ? </h1>
-<h3 class="ans wrong"> 4 </h3>
-<h3 class="ans wrong"> 3 </h3>
-<h3 class="ans correct"> 2 </h3>
-<h3 class="ans wrong"> 1 </h3>
-<script>
-    $('.ans').css('background-color', 'blue');
-
-    $('.wrong').click(function(event){
-        $('.correct').css('background-color', 'green'); 
-        $('.wrong').css('background-color', 'red');
-        alert('You click ' + $(event.target).text() + ', You are stupid.');
-    });
-
-    $('.correct').click(function(event){
-        $('.correct').css('background-color', 'green'); 
-        $('.wrong').css('background-color', 'red'); 
-        alert('You click ' + $(event.target).text() + ', You are smart.');
-    });
-</script>
-
-</section>
-<section>
-
-<h2> This is a slide in chapter 1</h2>
-
-
-</section>
-<section>
-
-<h2> Hello ~ </h2>
+<h1> 1 + 1 = ?</h1>
+<h3 class=" ans0 wrong0"> 1</h3>
+<h3 class=" ans0 correct0"> 2</h3>
+<h3 class=" ans0 wrong0"> 3</h3>
+<h3 class=" ans0 wrong0"> 4</h3>
+<script>setAnsAttr($(".ans0"), $(".wrong0"), $(".correct0"));</script>
 
 
 </section></section>
 <section><section>
 
-<h2> This is chapter 2</h2>
-
-
-</section>
-<section>
-
-<h3> You can put image in your slide</h3>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/480px-JavaScript-logo.png">
-
-
-</section>
-<section>
-
-<h2> You can also put some code and link</h2>
-
-
-
-
-
-<pre><code>function(){
-    console.log('Hello World');
-}
-</code></pre>
-<a href="https://github.com/Larry850806" style="font-size: 55px"> click me </a>
+<h1> 2 + 2 = ?</h1>
+<h3 class=" ans1 wrong1"> 1</h3>
+<h3 class=" ans1 wrong1"> 2</h3>
+<h3 class=" ans1 wrong1"> 3</h3>
+<h3 class=" ans1 correct1"> 4</h3>
+<script>setAnsAttr($(".ans1"), $(".wrong1"), $(".correct1"));</script>
 
 
 </section></section>
 <section><section>
 
-<h1> 你好</h1>
-<h2> 你好</h2>
-<h3> 你好</h3>
+<h1> 盧承億智商多少？</h1>
+<h3 class=" ans2 wrong2"> 30</h3>
+<h3 class=" ans2 wrong2"> 100</h3>
+<h3 class=" ans2 wrong2"> 150</h3>
+<h3 class=" ans2 correct2"> 300</h3>
+<script>setAnsAttr($(".ans2"), $(".wrong2"), $(".correct2"));</script>
 
-<ul>
-<li> 你好</li>
-</ul>
-
-
-</section>
-<section>
-
-<h1> END</h1>
 
 </section></section>
 </div>
