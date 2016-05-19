@@ -11,7 +11,7 @@
                 allAns.css('background-color', '#9F88FF');
                 //$('.ans').css('background-color', '#EED19C');
                 wrongAns.click(function(event){
-                    wrongAns.css('background-color', 'red');
+                    wrongAns.css('background-color', '#00FF00');
                     alert('你選了' + $(event.target).text() +'，你是智障嗎');
                     allAns.unbind('click');
                 });
