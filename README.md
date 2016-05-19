@@ -1,4 +1,4 @@
-## cool-slide is a command line tool. It can be used to make a cool slide in very easy syntax. 
+### cool-slide is a command line tool. It can be used to make a cool slide in very easy syntax. 
 
 # Requirement
 
