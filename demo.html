@@ -5,24 +5,7 @@
         <link rel="stylesheet" href="https://rawgit.com/Larry850806/cool-slide/2f1591a/src/reveal/css/theme/black.css">
         <link rel="stylesheet" href="https://rawgit.com/isagalaev/highlight.js/master/src/styles/dracula.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
-        <script>
-            var setAnsAttr = function(allAns, wrongAns, correctAns){
-                allAns.css('background-color', '#007799');
-                //$('.ans').css('background-color', '#EED19C');
-                wrongAns.click(function(event){
-                    wrongAns.css('background-color', '#FFA488');
-                    alert('你選了' + $(event.target).text() +'，你是智障嗎');
-                    allAns.unbind('click');
-                });
-
-                correctAns.click(function(event){
-                    wrongAns.css('background-color', '#FFA488');
-                    alert('你選了' + $(event.target).text() +'，你好聰明.');
-                    allAns.unbind('click');
-                });
-            }
-        </script>
+        <script src="https://rawgit.com/Larry850806/cool-slide/820eb08/src/outputHTML/question.js"></script>
     </head>
     <body>
         <div class="reveal">
@@ -55,11 +38,11 @@
 </section></section>
 <section><section>
 
-<h1> 盧承億智商多少？</h1>
-<h3 class=" ans2 wrong2"> 30</h3>
-<h3 class=" ans2 wrong2"> 100</h3>
-<h3 class=" ans2 wrong2"> 150</h3>
-<h3 class=" ans2 correct2"> 300</h3>
+<h1> 1 + 2 + ... + 49 + 50 = ?</h1>
+<h3 class=" ans2 wrong2"> 1375</h3>
+<h3 class=" ans2 correct2"> 1275</h3>
+<h3 class=" ans2 wrong2"> 1175</h3>
+<h3 class=" ans2 wrong2"> 1075</h3>
 <script>setAnsAttr($(".ans2"), $(".wrong2"), $(".correct2"));</script>
 
 
@@ -74,3 +57,4 @@ hljs.initHighlightingOnLoad();
 </script>
 </body>
 </html>
+
