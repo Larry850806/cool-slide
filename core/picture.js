@@ -8,7 +8,7 @@ var process = function(str){
     }
 
     var src = str.substring(4, str.length - 1);
-    rst.str = '<img src="' + src + '"><br>';
+    rst.str = '<br><img src="' + src + '"><br>';
 
     if(!rst.str) rst.err = true;
     return rst;

@@ -15,7 +15,7 @@ var process = function(str){
     var url = str.substring(leftSmallIndex + 1, rightSmallIndex);
     var text = str.substring(leftBigIndex + 1, rightBigIndex);
 
-    rst.str = '<a href="' + url + '" style="font-size: 55px"> ' + text + ' </a>';
+    rst.str = '<b><a href="' + url + '" style="font-size: 55px"> ' + text + ' </a></b>';
 
     if(!rst.str) rst.err = true;
     return rst;
