@@ -12,6 +12,7 @@ var process = function(str){
     if(str.match(/^#[^#].*$/)) rst.str = '<h1>' + str.substring(1) + '</h1>';
     else if(str.match(/^##[^#].*$/)) rst.str = '<h2>' + str.substring(2) + '</h2>';
     else if(str.match(/^###[^#].*$/)) rst.str = '<h3>' + str.substring(3) + '</h3>';
+    else if(str.match(/^####[^#].*$/)) rst.str = '<h4>' + str.substring(4) + '</h4>';
 
     if(!rst.str) rst.err = true;
     return rst;
