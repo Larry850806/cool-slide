@@ -51,8 +51,36 @@ npm install Larry850806/cool-slide -g
 
 ## Documentation
 
-`---` add a new chapter <br>
-`----` add a slide in the chapter <br>
+### new chapter
+`---`
+### new slide in the chapter
+`----`
+## text
+```
+# Hello
+## Hello
+### Hello
+```
+## picture
+`![](http://path/to/image.jpg)`
+## link
+`[Click Me](url)`
+## list
+```
+- item1
+- item2
+- item3
+```
+## code
+```
+(remove the comment)
+// ```
+// function(){
+//     console.log('123');
+// }
+// ```
+```
+
 
 [Documentation](https://rawgit.com/Larry850806/cool-slide/master/demo/teach.html)
 
