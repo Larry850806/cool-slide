@@ -16,11 +16,13 @@ var output = new Output(htmlname);
 var funcMap = [];
 
 funcMap['---'] = function(line){
+    output.addStrIntoSlide('');
     output.addNewChapter();
     output.addNewSlide();
 };
 
 funcMap['----'] = function(line){
+    output.addStrIntoSlide('');
     output.addNewSlide();
 };
 
