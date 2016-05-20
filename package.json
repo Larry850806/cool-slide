@@ -1,6 +1,6 @@
 {
   "name": "cool-slide",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "a terminal app to make cool slide",
   "main": "index.js",
   "scripts": {

@@ -31,6 +31,7 @@ var funcDefault = function(line){
 };
 
 var funcPrintHTML = function(callback){
+    output.addStrIntoSlide('');
     output.printHTML(callback);
 };
 
