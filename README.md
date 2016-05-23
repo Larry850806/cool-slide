@@ -7,7 +7,7 @@
 # Install
 
 ```
-npm install Larry850806/cool-slide -g
+npm install CoolSlide/cool-slide -g
 ```
 # Documentation
 
