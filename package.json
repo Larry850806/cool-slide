@@ -1,6 +1,6 @@
 {
   "name": "cool-slide",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "a terminal app to make cool slide",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,8 @@
   "author": "Larry Lu",
   "license": "ISC",
   "dependencies": {
-    "html-minifier": "^2.1.2"
+    "bluebird": "^3.4.0",
+    "html-minifier": "^2.1.2",
+    "marked": "^0.3.5"
   }
 }

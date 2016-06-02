@@ -1,44 +1,32 @@
-#!/usr/bin/env node
-var Output = require('./output');
-var Input = require('./input');
-var compress = require('./compress');
+var fs = require('fs');
+var Promise = require('bluebird');
+var readline = require('readline');
+var convert = require('./convert');
 
-var mdname = process.argv[2];
-var htmlname = process.argv[3];
+var coolSlide = function(infile, outfile){
+    convert.setOutFile(outfile);
 
-if(!htmlname){
-    console.log('usage: cool-slide demo.md demo.html');
-    return;
-}
+    var rl = readline.createInterface({
+          input: fs.createReadStream(infile)
+    });
 
-var output = new Output(htmlname);
+    rl.on('line', function(line){
+        
+        if(line === '---'){
+            convert.addNewChapter();
+            convert.addNewSlide();
+        } else if(line === '----'){
+            convert.addNewSlide();
+        } else {
+            convert.addStrIntoSlide(line);
+        }
 
-var funcMap = [];
-
-funcMap['---'] = function(line){
-    output.addStrIntoSlide('');
-    output.addNewChapter();
-    output.addNewSlide();
+    }).on('close', function(){
+        convert.printHTML(function(){
+            console.log('finish');
+        });
+    });
 };
 
-funcMap['----'] = function(line){
-    output.addStrIntoSlide('');
-    output.addNewSlide();
-};
-
-var funcDefault = function(line){
-    output.addStrIntoSlide(line);
-};
-
-var funcPrintHTML = function(callback){
-    output.addStrIntoSlide('');
-    output.printHTML(callback);
-};
-
-var input = new Input(mdname);
-input.process(funcMap, funcDefault, funcPrintHTML, function(){
-    // compress(htmlname);
-    console.log('success');
-});
-
+coolSlide('demo.md', 'demo.html');
 
