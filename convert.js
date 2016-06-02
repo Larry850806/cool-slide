@@ -10,8 +10,6 @@ const chapterTail = '</section></section>';
 const head = fs.readFileSync(__dirname + '/src/outputHTML/head.html').toString();
 const tail = fs.readFileSync(__dirname + '/src/outputHTML/tail.html').toString();
 
-var structure = [];
-
 var addNewChapter = function(){
     structure.push([]);
 };
@@ -31,40 +29,41 @@ var addStrIntoSlide = function(mdStr){
     }
 };
 
-var setOutFile = function(outFile){
+var init = function(){
+    structure = [];
     addNewChapter();
     addNewSlide();
-    var out = fs.createWriteStream(outFile, {flags : 'w'});
-    console.output = function(d, callback){
-        out.write(util.format(d) + '\n', 'utf8', callback);
-    };
 };
 
-var printHTML = function(callback){
-    console.output(head);
-
+var getHTML = function(){
+    var html;
+    html += head + '\n';
+    
     for(var i in structure){
-        console.output(chapterHead);
+        html += chapterHead + '\n';
         var chapter = structure[i];
 
         for(var j in chapter){
-            if(j != 0) console.output(slideHead);
+            if(j != 0) html += slideHead + '\n';
             var slide = chapter[j];
-            console.output(marked(slide));
-            if(j != chapter.length - 1) console.output(slideTail);
+            html += marked(slide) + '\n';
+            if(j != chapter.length - 1) html += slideTail + '\n';
         }
 
-        console.output(chapterTail);
+        html += chapterTail + '\n';
     }
 
-    console.output(tail, callback);
-    structure = [];
+    html += tail + '\n';
+    init();
+    return html;
 };
 
-module.exports.setOutFile = setOutFile;
+var structure = null;
+init();
+
 module.exports.addNewChapter = addNewChapter;
 module.exports.addNewSlide = addNewSlide;
 module.exports.addStrIntoSlide = addStrIntoSlide;
-module.exports.printHTML = printHTML;
+module.exports.getHTML = getHTML;
 
 

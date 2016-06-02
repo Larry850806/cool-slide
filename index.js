@@ -1,17 +1,11 @@
-var fs = require('fs');
 var Promise = require('bluebird');
-var readline = require('readline');
 var convert = require('./convert');
 
-var coolSlide = function(infile, outfile){
-    convert.setOutFile(outfile);
+var coolSlide = function(mdStr){
+    var lines = mdStr.split('\n');
 
-    var rl = readline.createInterface({
-          input: fs.createReadStream(infile)
-    });
-
-    rl.on('line', function(line){
-        
+    for(var i=0 ; i<lines.length ; i++){
+        var line = lines[i];
         if(line === '---'){
             convert.addNewChapter();
             convert.addNewSlide();
@@ -20,13 +14,11 @@ var coolSlide = function(infile, outfile){
         } else {
             convert.addStrIntoSlide(line);
         }
+    }
 
-    }).on('close', function(){
-        convert.printHTML(function(){
-            console.log('finish');
-        });
-    });
+    var htmlStr = convert.getHTML();
+    return htmlStr;
 };
 
-coolSlide('demo.md', 'demo.html');
+module.exports = coolSlide;
 
