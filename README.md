@@ -1,14 +1,30 @@
-### cool-slide is a command line tool. It can be used to make a cool slide in very easy syntax. 
+### cool-slide is a nodejs module and command line tool. It can be used to make a cool slide in very easy syntax. 
+
+## [See Simple Demo](http://coolslide.github.io)
 
 # Requirement
 
 - `node >= 0.12.7`
 
-# Install
+# Install as nodejs module
+
+```bash
+npm install CoolSlide/cool-slide --save
+```
+```js
+var coolSlide = require('cool-slide');
+
+var htmlStr = coolSlide(markDownStr);
+```
+
+# Install as command line tool
 
 ```
-npm install CoolSlide/cool-slide -g
+npm install CoolSlide/cool-slide -g  // install command line tool
+
+cool-slide test.md test.html         // generate test.html from test.md
 ```
+
 # Documentation
 
 ### new chapter
@@ -40,14 +56,6 @@ npm install CoolSlide/cool-slide -g
 //     console.log('123');
 // }
 // ```
-```
-### Question
-```
-[Q] 1 + 1 = ?
-[A] 1
-[A#] 2
-[A] 3
-[A] 4
 ```
 
 # Example
@@ -85,9 +93,6 @@ npm install CoolSlide/cool-slide -g
 - step3: `cool-slide test.md test.html  // generate test.html from test.md`
 
 - step4: open 'test.html' to see your slide
-
-# UML Diagram
-![](http://imgur.com/qXfy4lz.png)
 
 # License
 
