@@ -20,8 +20,9 @@ var htmlStr = coolSlide(markDownStr);
 # Install as command line tool
 
 ```
-npm install CoolSlide/cool-slide -g
-cool-slide test.md test.html  // generate test.html from test.md
+npm install CoolSlide/cool-slide -g  // install command line tool
+
+cool-slide test.md test.html         // generate test.html from test.md
 ```
 
 # Documentation
@@ -55,14 +56,6 @@ cool-slide test.md test.html  // generate test.html from test.md
 //     console.log('123');
 // }
 // ```
-```
-### Question
-```
-[Q] 1 + 1 = ?
-[A] 1
-[A#] 2
-[A] 3
-[A] 4
 ```
 
 # Example
