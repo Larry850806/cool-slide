@@ -1,10 +1,18 @@
 ### cool-slide is a nodejs module and command line tool. It can be used to make a cool slide in very easy syntax. 
 
-## [See Simple Demo](http://coolslide.github.io)
+## [Simple Demo](http://coolslide.github.io)
 
 # Requirement
 
 - `node >= 0.12.7`
+
+# Install as command line tool
+
+```
+npm install CoolSlide/cool-slide -g  # install command line tool
+
+cool-slide test.md test.html         # generate test.html from test.md
+```
 
 # Install as nodejs module
 
@@ -15,14 +23,6 @@ npm install CoolSlide/cool-slide --save
 var coolSlide = require('cool-slide');
 
 var htmlStr = coolSlide(markDownStr);
-```
-
-# Install as command line tool
-
-```
-npm install CoolSlide/cool-slide -g  // install command line tool
-
-cool-slide test.md test.html         // generate test.html from test.md
 ```
 
 # Documentation
