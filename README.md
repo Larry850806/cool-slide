@@ -1,4 +1,6 @@
-### cool-slide is a command line tool. It can be used to make a cool slide in very easy syntax. 
+### cool-slide is a nodejs module and command line tool. It can be used to make a cool slide in very easy syntax. 
+
+## [Demo](coolslide.github.io)
 
 # Requirement
 
