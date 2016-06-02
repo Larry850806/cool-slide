@@ -4,11 +4,24 @@
 
 - `node >= 0.12.7`
 
-# Install
+# Install as nodejs module
+
+```bash
+npm install CoolSlide/cool-slide --save
+```
+```js
+var coolSlide = require('cool-slide');
+
+var htmlStr = coolSlide(markDownStr);
+```
+
+# Install as command line tool
 
 ```
 npm install CoolSlide/cool-slide -g
+cool-slide test.md test.html  // generate test.html from test.md
 ```
+
 # Documentation
 
 ### new chapter
@@ -85,9 +98,6 @@ npm install CoolSlide/cool-slide -g
 - step3: `cool-slide test.md test.html  // generate test.html from test.md`
 
 - step4: open 'test.html' to see your slide
-
-# UML Diagram
-![](http://imgur.com/qXfy4lz.png)
 
 # License
 
