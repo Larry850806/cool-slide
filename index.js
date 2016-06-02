@@ -1,4 +1,3 @@
-var Promise = require('bluebird');
 var convert = require('./convert');
 
 var coolSlide = function(mdStr){

@@ -1,6 +1,4 @@
 var fs = require('fs');
-var util = require('util');
-var path = require('path');
 var marked = require('marked');
 
 const slideHead = '<section>';
